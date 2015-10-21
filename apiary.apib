@@ -5,6 +5,27 @@ HOST: http://polls.apiblueprint.org/
 
 The following are a list of API resources required for the Betsson Expense Tool Implementation
 
+## Authentication [/auth]
+
+### Authenticate User [POST]
+
++ Request (application/json)
+
+        {
+            "username": "johndoe",
+            "password": "mypassword"
+        }
+        
++ Response 200 (application/json)
+        {
+             "token":"AAAADDJKALKDJFD"
+        }
+
++ Response 403 (application/json)
+        {
+             "error":"Authentication failed"
+        }
+
 ## Questions Collection [/questions]
 
 ### List All Questions [GET]
